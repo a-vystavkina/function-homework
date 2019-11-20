@@ -89,22 +89,19 @@ function getPersonData(secretData) {
     } else if(name === 'bbb'){
       i = 'secondName';
     }
-  result[i] = PersonData(secretData);
+  result[i] = PersonData(secretData[name]);
   }
   return result;
 
 }
 
-
 function PersonData(secretData) {
-  let i;
-  for(let name in secretData) {
-    if(secretData[name] === 0) {
+  let i, name;
+    if(secretData === 0) {
       i = 'Родриго';
-    } else if(secretData[name] === 1){
+    } else {
       i = 'Эмильо'; 
     }
-  }
   return i;
 }
 
